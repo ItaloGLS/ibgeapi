@@ -1,6 +1,6 @@
-# 📱 IBGE Nomes App
+# 📱 IBGE API
 
-Este app Android consulta a frequência de nomes próprios no Brasil usando a [API de nomes do IBGE](https://servicodados.ibge.gov.br/api/docs/nomes).  
+Este app Android consulta a frequência de nomes próprios no Brasil usando a [API de nomes do IBGE] (https://servicodados.ibge.gov.br/api/docs/nomes).  
 Ele retorna a frequência do nome digitado por década de nascimento.
 
 Construído com **Kotlin** + **Retrofit**.
@@ -96,7 +96,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
-```IbgeApi.kt
+### ✅ `IbgeApi.kt`
+```kotlin
 package com.example.ibgenomesapp
 
 import retrofit2.Call
@@ -109,8 +110,8 @@ interface IbgeApi {
     fun getNameInfo(@Path("nome") nome: String): Call<List<IbgeResponse>>
 }
 ```
-
-```IbgeResponse.kt
+### ✅ `IbgeResponse.kt`
+```kotlin
 package com.example.ibgenomesapp
 
 // Modelo para a resposta da API
